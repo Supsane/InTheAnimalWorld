@@ -1,16 +1,18 @@
 package com.example.chashurinevgeny.intheanimalworld;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button trueButton = null;
     private Button falseButton = null;
     private TextView startTextView = null;
+    Controller controller;
 
 
     @Override
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
+        Context context = getApplicationContext();
+        controller.clickHandler(context);
     }
 }
