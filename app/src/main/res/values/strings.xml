@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">В мире жимвотных</string>
+    <string name="trueButton">Правда</string>
+    <string name="falseButton">Ложь</string>
+    <string name="startTextView">Начальный текст</string>
+    <string-array name="questions">
+        <item>Рыба плавает в воде?</item>
+        <item>Кролик любит морковку?</item>
+        <item>У слона большие уши?</item>
+        <item>Бегемот больше мышки?</item>
+        <item>Кошки и собаки домашние животные?</item>
+        <item>У жирафа длинная шея?</item>
+    </string-array>
+</resources>
