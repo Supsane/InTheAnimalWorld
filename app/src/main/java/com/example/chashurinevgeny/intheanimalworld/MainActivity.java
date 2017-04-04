@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button trueButton = null;
     private Button falseButton = null;
     private Button startButton = null;
+    private Button restartButton = null;
+    private Button exitButton = null;
     private TextView startTextView = null;
     private TextView questionsComplete = null;
     private TextView questionsCompleteNumber = null;
@@ -27,9 +29,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         trueButton = (Button) findViewById(R.id.trueButton);
         falseButton = (Button) findViewById(R.id.falseButton);
         startButton = (Button) findViewById(R.id.startButton);
+        restartButton = (Button) findViewById(R.id.restartButton);
         startButton.setOnClickListener(this);
         trueButton.setOnClickListener(this);
         falseButton.setOnClickListener(this);
+        restartButton.setOnClickListener(this);
         startTextView = (TextView) findViewById(R.id.startTextView);
         questionsComplete = (TextView) findViewById(R.id.questionsComplete);
         questionsCompleteNumber = (TextView) findViewById(R.id.questionsCompleteNumber);
@@ -48,8 +52,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             questionsCompleteNumber.setVisibility(View.VISIBLE);
             questionsLeft.setVisibility(View.VISIBLE);
             questionsLeftNumber.setVisibility(View.VISIBLE);
-            controller.clickHandler(v, context, startTextView, questionsLeftNumber, questionsCompleteNumber);
+            controller.clickHandler(v, context, startTextView, questionsLeftNumber, questionsCompleteNumber, trueButton, falseButton, restartButton, exitButton);
         }
-        if (v.getId() == R.id.trueButton || v.getId() == R.id.falseButton) controller.clickHandler(v, context, startTextView, questionsLeftNumber, questionsCompleteNumber);
+        if (v.getId() == R.id.trueButton || v.getId() == R.id.falseButton) {
+            controller.clickHandler(v, context, startTextView, questionsLeftNumber, questionsCompleteNumber, trueButton, falseButton, restartButton, exitButton);
+        }
+        if (v.getId() == R.id.restartButton) {
+            restartButton.setVisibility(View.GONE);
+            trueButton.setVisibility(View.VISIBLE);
+            falseButton.setVisibility(View.VISIBLE);
+            questionsCompleteNumber.setText(R.string.questionsCompleteNumber);
+            questionsLeftNumber.setText(R.string.questionsLeftNumber);
+            controller.clickHandler(v, context, startTextView, questionsLeftNumber, questionsCompleteNumber, trueButton, falseButton, restartButton, exitButton);
+        }
     }
 }
