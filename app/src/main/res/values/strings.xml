@@ -10,7 +10,7 @@
     <string name="questionsLeftNumber">0</string>
     <string name="questionsCompleteNumber">0</string>
     <string name="restartButton">Сыграть еще?</string>
-    <string name="finishTextView">Вопросы закончились, Вы верно ответили на </string>
+    <string name="finishTextView" formatted="true">Вопросы закончились, Вы верно ответили на %1$s вопросов. Если хотите повторить, нажмите на кнопку \"Сыграть еще?\"</string>
     <string name="exitButton">Выход</string>
     <string-array name="questions">
         <item>Рыба плавает в воде?</item>
