@@ -30,10 +30,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         falseButton = (Button) findViewById(R.id.falseButton);
         startButton = (Button) findViewById(R.id.startButton);
         restartButton = (Button) findViewById(R.id.restartButton);
+        exitButton = (Button) findViewById(R.id.exitButton);
         startButton.setOnClickListener(this);
         trueButton.setOnClickListener(this);
         falseButton.setOnClickListener(this);
         restartButton.setOnClickListener(this);
+        exitButton.setOnClickListener(this);
         startTextView = (TextView) findViewById(R.id.startTextView);
         questionsComplete = (TextView) findViewById(R.id.questionsComplete);
         questionsCompleteNumber = (TextView) findViewById(R.id.questionsCompleteNumber);
@@ -59,11 +61,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v.getId() == R.id.restartButton) {
             restartButton.setVisibility(View.GONE);
+            exitButton.setVisibility(View.GONE);
             trueButton.setVisibility(View.VISIBLE);
             falseButton.setVisibility(View.VISIBLE);
             questionsCompleteNumber.setText(R.string.questionsCompleteNumber);
             questionsLeftNumber.setText(R.string.questionsLeftNumber);
             controller.clickHandler(v, context, startTextView, questionsLeftNumber, questionsCompleteNumber, trueButton, falseButton, restartButton, exitButton);
         }
+        if(v.getId() == R.id.exitButton) System.exit(0);
     }
 }

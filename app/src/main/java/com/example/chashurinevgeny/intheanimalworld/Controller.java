@@ -23,6 +23,7 @@ public class Controller {
                 trueButton.setVisibility(View.INVISIBLE);
                 falseButton.setVisibility(View.INVISIBLE);
                 restartButton.setVisibility(View.VISIBLE);
+                exitButton.setVisibility(View.VISIBLE);
                 startTextView.setText(R.string.finishTextView);
                 questionsCompleteNumber.setText(String.valueOf(i));
                 questionsLeftNumber.setText(String.valueOf(questions.length - i));
