@@ -1,8 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">В мире животных</string>
     <string name="trueButton">Да</string>
     <string name="falseButton">Нет</string>
-    <string name="startTextView">Начальный текст</string>
+    <string name="startTextView">Вас приветствует тестовое приложение под названием \"В мире животных\", представляющее из себя простую викторину с вопросами о животных, на которые нужно ответить \"Да\" или \"Нет\". Нажмите старт, чтобы начать викторину.</string>
+    <string name="startButton">Старт</string>
     <string-array name="questions">
         <item>Рыба плавает в воде?</item>
         <item>Кролик любит морковку?</item>
@@ -12,17 +14,17 @@
         <item>Бегемот больше мышки?</item>
         <item>Кошки и собаки домашние животные?</item>
         <item>У жирафа длинная шея?</item>
-        <item>Клопы не пахнут?</item>
+        <item>Клопы пахнут?</item>
     </string-array>
     <string-array name="answer">
         <item>Да</item>
         <item>Да</item>
         <item>Нет</item>
-        <item>У слона большие уши?</item>
-        <item>Колибри больше пингвина?</item>
-        <item>Бегемот больше мышки?</item>
-        <item>Кошки и собаки домашние животные?</item>
-        <item>У жирафа длинная шея?</item>
-        <item>Клопы не пахнут?</item>
+        <item>Да</item>
+        <item>Нет</item>
+        <item>Да</item>
+        <item>Да</item>
+        <item>Да</item>
+        <item>Да</item>
     </string-array>
 </resources>

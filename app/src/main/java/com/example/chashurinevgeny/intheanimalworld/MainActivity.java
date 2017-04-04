@@ -11,8 +11,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button trueButton = null;
     private Button falseButton = null;
+    private Button startButton = null;
     private TextView startTextView = null;
-    Controller controller;
+    private Controller controller = new Controller();
 
 
     @Override
@@ -21,12 +22,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         trueButton = (Button) findViewById(R.id.trueButton);
         falseButton = (Button) findViewById(R.id.falseButton);
+        startButton = (Button) findViewById(R.id.startButton);
+        startButton.setOnClickListener(this);
+        trueButton.setOnClickListener(this);
+        falseButton.setOnClickListener(this);
         startTextView = (TextView) findViewById(R.id.startTextView);
     }
 
     @Override
     public void onClick(View v) {
         Context context = getApplicationContext();
-        controller.clickHandler(context);
+        if (v.getId() == R.id.startButton) {
+            startButton.setVisibility(View.GONE);
+            trueButton.setVisibility(View.VISIBLE);
+            falseButton.setVisibility(View.VISIBLE);
+            controller.startButtonHandler(v, context, startTextView);
+        }
+        if (v.getId() == R.id.trueButton || v.getId() == R.id.falseButton) controller.trueFalseButtonHandler(v, context, startTextView);
     }
 }
