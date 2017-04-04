@@ -13,6 +13,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button falseButton = null;
     private Button startButton = null;
     private TextView startTextView = null;
+    private TextView questionsComplete = null;
+    private TextView questionsCompleteNumber = null;
+    private TextView questionsLeft = null;
+    private TextView questionsLeftNumber = null;
     private Controller controller = new Controller();
 
 
@@ -27,6 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         trueButton.setOnClickListener(this);
         falseButton.setOnClickListener(this);
         startTextView = (TextView) findViewById(R.id.startTextView);
+        questionsComplete = (TextView) findViewById(R.id.questionsComplete);
+        questionsCompleteNumber = (TextView) findViewById(R.id.questionsCompleteNumber);
+        questionsLeft = (TextView) findViewById(R.id.questionsLeft);
+        questionsLeftNumber = (TextView) findViewById(R.id.questionsLeftNumber);
     }
 
     @Override
@@ -36,8 +44,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startButton.setVisibility(View.GONE);
             trueButton.setVisibility(View.VISIBLE);
             falseButton.setVisibility(View.VISIBLE);
-            controller.startButtonHandler(v, context, startTextView);
+            questionsComplete.setVisibility(View.VISIBLE);
+            questionsCompleteNumber.setVisibility(View.VISIBLE);
+            questionsLeft.setVisibility(View.VISIBLE);
+            questionsLeftNumber.setVisibility(View.VISIBLE);
+            controller.clickHandler(v, context, startTextView, questionsLeftNumber, questionsCompleteNumber);
         }
-        if (v.getId() == R.id.trueButton || v.getId() == R.id.falseButton) controller.trueFalseButtonHandler(v, context, startTextView);
+        if (v.getId() == R.id.trueButton || v.getId() == R.id.falseButton) controller.clickHandler(v, context, startTextView, questionsLeftNumber, questionsCompleteNumber);
     }
 }

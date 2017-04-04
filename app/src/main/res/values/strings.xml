@@ -5,6 +5,10 @@
     <string name="falseButton">Нет</string>
     <string name="startTextView">Вас приветствует тестовое приложение под названием \"В мире животных\", представляющее из себя простую викторину с вопросами о животных, на которые нужно ответить \"Да\" или \"Нет\". Нажмите старт, чтобы начать викторину.</string>
     <string name="startButton">Старт</string>
+    <string name="questionsComplete">Вопросов пройдено:</string>
+    <string name="questionsLeft">Осталось:</string>
+    <string name="questionsLeftNumber">0</string>
+    <string name="questionsCompleteNumber">0</string>
     <string-array name="questions">
         <item>Рыба плавает в воде?</item>
         <item>Кролик любит морковку?</item>
